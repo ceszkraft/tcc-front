@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+
+  // RESET PAGE
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  box-sizing: border-box
+
+  // FONTS
+@font-face
+  font-family: 'Chakra'
+  src: url('assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf')
+  font-weight: 300
+  font-style: normal
+
+@font-face
+  font-family: 'Libre'
+  src: url('assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf')
+  font-weight: 700
+  font-style: normal
+
+@font-face
+  font-family: 'Sulphur'
+  src: url('assets/fonts/Sulphur_Point/SulphurPoint-Regular.ttf')
+  font-weight: 900
+  font-style: normal
+  // ----------------------------------------------------------------------------------------
+    // MAIN AREA
+
+:root
+  --font-primary: 'Futura', 'Courier New', Courier, monospace
+  --font-header: 'Chakra'
+  --font-text: 'Libre'
+  --font-alternative: Sulphur
+
+  --primary-color: #FFDD00
+  --secundary-color: ##0057B7
+  --tertiary-color: #504c4c
+  --optional-color: rgba(0, 0, 0, 0.8)
+
+  --font-size-small: 0.625em
+  --font-size-md: 1em
+  --font-size-lg: 1.25em
+  --font-size-xlg: 1.875em
+
+  // GENERAL STYLES
+@mixin anchor
+  color: var(--text-color-primary)
+  text-decoration: none
+
+@mixin reset-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+  // ----------------------------------------------------------------------------------------
+
+  // MOBILE FIRST CONFIGS
+@mixin respond($breakpoint)
+  @if $breakpoint == phone
+    @media only screen and (max-width: 37.5em) //600px
+      @content
+  @else if $breakpoint == bigphone
+    @media only screen and (min-width: 37.5em) //600px
+      @content
+  @else if $breakpoint == tabletportrait
+    @media only screen and (min-width: 48em) //768px
+      @content
+  @else if $breakpoint == tabletlandscape
+    @media only screen and (min-width: 50.06em) //801px
+      @content
+  @else if $breakpoint == bigscreen
+    @media only screen and (min-width: 75em) //1200px
+      @content
+
+  // ----------------------------------------------------------------------------------------
+
+  // MOBILE USE
+@include respond(phone)
+  body
+    font-size: 50%
+    background-color: red
+
+@include respond(bigphone)
+  body
+    background-color: black
+    font-size: 60%
+
+@include respond(tabletportrait)
+  body
+    background-color: pink
+    font-size: 70%
+
+@include respond(tabletlandscape)
+  body
+    background-color: yellow
+    font-size: 80%
+
+@include respond(bigscreen)
+  body
+    background-color: grey
+    font-size: 100%
