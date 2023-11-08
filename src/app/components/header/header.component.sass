@@ -1,0 +1,36 @@
+@import 'src/styles.sass'
+
+header
+  height: 7vh
+  width: 100%
+  background-color: var(--optional-color)
+  border-radius: 1rem
+  top: 0
+  left: 0
+  position: fixed
+
+  & nav
+    display: flex
+    height: 100%
+    width: 100%
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+
+  & ul
+    width: 100%
+    display: flex
+    justify-content: space-evenly
+    font-family: var(--font-primary)
+
+  & li
+    @include reset-list
+
+  & a
+    @include anchor
+    opacity: .8
+
+  & a:hover
+    opacity: 1
+
+
