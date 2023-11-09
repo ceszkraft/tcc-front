@@ -27,6 +27,9 @@ export class FormComponent {
       Validators.minLength(6),
       Validators.required
     ]),
+    age: new FormControl('',[
+      Validators.required
+    ])
   });
 
   addressForm = new FormGroup({
@@ -57,5 +60,9 @@ export class FormComponent {
 
   onSubmit(){
     console.log(this.profileForm.value);
+    console.log(this.addressForm.value);
+    this.profileForm.reset
+    this.addressForm.reset
+
   }
 }
