@@ -23,9 +23,6 @@ export class FormComponent {
       Validators.minLength(6),
       Validators.required
     ]),
-    age: new FormControl('', [
-      Validators.required
-    ]),
   });
 
   onSubmit(){
