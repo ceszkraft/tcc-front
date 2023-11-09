@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormsModule, ReactiveFormsModule,
+   Validators, FormGroup, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,6 +8,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form.component.sass']
 })
 export class FormComponent {
+  constructor(private _formBuilder: FormBuilder) {}
+  firstFormGroup: FormGroup = this._formBuilder.group({firstCtrl: ['']});
+  secondFormGroup: FormGroup = this._formBuilder.group({secondCtrl: ['']});
 
   profileForm = new FormGroup({
     name: new FormControl('', [
@@ -25,9 +29,33 @@ export class FormComponent {
     ]),
   });
 
+  addressForm = new FormGroup({
+    street: new FormControl('', [
+      Validators.required,
+      Validators.minLength(4),
+      Validators.maxLength(100)
+    ]),
+    number: new FormControl('', [
+      Validators.maxLength(10000)
+    ]),
+    cep: new FormControl('', [
+      Validators.required,
+      Validators.minLength(9),
+      Validators.maxLength(9)
+    ]), 
+    state: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(20)
+    ]),
+    city: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(20)
+    ])
+  })
+
   onSubmit(){
     console.log(this.profileForm.value);
-    this.profileForm.reset()
   }
-
 }
