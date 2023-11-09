@@ -1,0 +1,49 @@
+<div class="sign-up">
+  <div class="col-md-12">
+    <form (ngSubmit)="onSubmit()" [formGroup]="profileForm">
+      <h4>Sign Up</h4>
+
+      <fieldset>
+        <legend><span class="number">1</span> Your Basic Info</legend>
+
+        <label for="name">*Name:</label>
+        <input type="text" id="name" name="user_name" formControlName="name" />
+
+        <label for="email">*Email:</label>
+        <input
+          type="email"
+          id="mail"
+          name="user_email"
+          formControlName="email"
+        />
+
+        <label for="password">*Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="user_password"
+          formControlName="pass"
+        />
+
+        <label>*Age:</label>
+        <input
+          type="radio"
+          id="under_13"
+          value="under_13"
+          name="age"
+          formControlName="age"
+        /><label for="under_13" class="light">Under 13</label><br />
+        <input
+          type="radio"
+          id="over_13"
+          value="over_13"
+          name="age"
+          formControlName="age"
+        /><label for="over_13" class="light">Over 13</label>
+
+      </fieldset>
+
+      <button type="submit" [disabled]="profileForm.invalid">Sign Up</button>
+    </form>
+  </div>
+</div>
