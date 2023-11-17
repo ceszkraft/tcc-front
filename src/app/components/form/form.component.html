@@ -47,7 +47,7 @@
           /><label for="over_13" class="light">Over 13</label>
         </fieldset>
 
-        <button mat-button matStepperNext [disabled]="profileForm.invalid">
+        <button id="first_next"  matStepperNext [disabled]="profileForm.invalid">
           Next
         </button>
       </form>
@@ -79,7 +79,9 @@
       </fieldset>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext [disabled]="addressForm.invalid">
+        <button mat-button matStepperNext 
+        id="second_next"
+        [disabled]="addressForm.invalid">
           Next
         </button>
       </div>
@@ -91,7 +93,10 @@
     <p>You are now done.</p>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-      <button class="submit" mat-button (click)="onSubmit()">Register</button>
+      <button class="submit" 
+      id="register"
+      mat-button 
+      (click)="onSubmit()">Register</button>
     </div>
   </mat-step>
 </mat-stepper>

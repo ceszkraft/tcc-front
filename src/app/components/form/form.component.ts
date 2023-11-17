@@ -1,16 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormsModule, ReactiveFormsModule,
    Validators, FormGroup, FormControl} from '@angular/forms';
+  
+import { PersonModel } from 'src/app/model/Person';
+import { FormService } from './form.service';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.sass']
 })
-export class FormComponent {
-  constructor(private _formBuilder: FormBuilder) {}
+export class FormComponent implements OnInit{
+  constructor(private _formBuilder: FormBuilder, 
+              private service: FormService) {}
+  
+  ngOnInit(): void {
+    this.getUsers()
+  }
+
+  getUsers(){
+    this.service.getUserService().subscribe((data: PersonModel[]) => {
+      console.log(data);
+      this.personModels = data
+    })
+  }
+
   firstFormGroup: FormGroup = this._formBuilder.group({firstCtrl: ['']});
   secondFormGroup: FormGroup = this._formBuilder.group({secondCtrl: ['']});
+
+  personModels?: PersonModel[]
+  personModel: PersonModel = {
+    id: 0,
+    first_name: '',
+    last_name: '',
+    cpf: '',
+    email: '',
+    secret: '',
+    consumerName: ''
+  }
 
   profileForm = new FormGroup({
     name: new FormControl('', [
@@ -43,7 +70,7 @@ export class FormComponent {
     ]),
     cep: new FormControl('', [
       Validators.required,
-      Validators.minLength(9),
+      Validators.minLength(8),
       Validators.maxLength(9)
     ]), 
     state: new FormControl('', [

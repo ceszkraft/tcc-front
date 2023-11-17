@@ -6,10 +6,12 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
-    FormComponent
+    FormComponent,
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatFormFieldModule,
     MatStepperModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   exports:[
     FormComponent,
