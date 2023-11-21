@@ -1,3 +1,4 @@
+@if (defaultStatusServer) {
 <mat-stepper>
   <mat-step [stepControl]="firstFormGroup">
     <div class="sign-up">
@@ -47,7 +48,7 @@
           /><label for="over_13" class="light">Over 13</label>
         </fieldset>
 
-        <button id="first_next"  matStepperNext [disabled]="profileForm.invalid">
+        <button id="first_next" matStepperNext [disabled]="profileForm.invalid">
           Next
         </button>
       </form>
@@ -79,9 +80,12 @@
       </fieldset>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext 
-        id="second_next"
-        [disabled]="addressForm.invalid">
+        <button
+          mat-button
+          matStepperNext
+          id="second_next"
+          [disabled]="addressForm.invalid"
+        >
           Next
         </button>
       </div>
@@ -93,10 +97,22 @@
     <p>You are now done.</p>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-      <button class="submit" 
-      id="register"
-      mat-button 
-      (click)="onSubmit()">Register</button>
+      <button class="submit" id="register" mat-button (click)="onSubmit()">
+        Register
+      </button>
     </div>
   </mat-step>
 </mat-stepper>
+} @else {
+
+<div class="offlineContainer">
+  <h5>Servidor em manutenção!</h5>
+  <p>retorne em 30 minutos!</p>
+  <img
+    class="serverDown"
+    src="assets/util/serverOffline/serverOffline.gif"
+    alt=""
+  />
+</div>
+
+}

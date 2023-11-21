@@ -15,7 +15,17 @@ export class FormComponent implements OnInit{
               private service: FormService) {}
   
   ngOnInit(): void {
-    this.getUsers()
+    // this.getUsers()
+    this.isServerRunning()
+  }
+
+  defaultStatusServer: Boolean = false;
+
+  isServerRunning(){
+    this.service.isServerRunning().subscribe((data: Boolean) => {
+      console.log(data);
+      this.defaultStatusServer = data
+    })
   }
 
   getUsers(){

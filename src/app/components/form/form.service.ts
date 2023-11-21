@@ -12,6 +12,11 @@ export class FormService {
 
   constructor(private http: HttpClient) { }
 
+
+  isServerRunning(): Observable<Boolean>{
+    return this.http.get<Boolean>(`${BASEURL.status}`)
+  }
+
   getUserService(): Observable<PersonModel[]>{
     return this.http.get<PersonModel[]>(`${BASEURL.person}`)
   }
