@@ -1,129 +1,93 @@
 <main>
   @for (item of links; track $index) {
-  <div class="card-bodybuilding">
-    <img
-      src="{{ item.bodyBuilding.bodyBuildingImg }}"
-      alt="{{ item.bodyBuilding.bodyBuildingTitle }}"
-    />
+  <div class="card">
+    <img src="{{ item.bodyBuilding.bodyBuildingImg }}" alt="" />
     <div class="card-content">
       <h2>{{ item.bodyBuilding.bodyBuildingTitle }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci
-        voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores
-        harum? Dicta odio aut hic.
+        {{ item.bodyBuilding.bodyBuildingDescription }}
       </p>
       <a href="{{ item.bodyBuilding.bodyBuildingAnchor }}" class="button">
         Find out more
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
+        <span class="material-symbols-outlined"> Saiba mais </span>
       </a>
     </div>
   </div>
-  <div class="card-crossfit">
-    <img
-      src="{{ item.crossfit.crossfitImg }}"
-      alt="{{ item.crossfit.crossfitTitle }}"
-    />
+  <div class="card">
+    <img src="{{ item.crossfit.crossfitImg }}" alt="" />
     <div class="card-content">
       <h2>{{ item.crossfit.crossfitTitle }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci
-        voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores
-        harum? Dicta odio aut hic.
+        {{ item.crossfit.crossfitDescription }}
       </p>
       <a href="{{ item.crossfit.crossfitAnchor }}" class="button">
-        Find out more
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
+        <!-- Find out more -->
+        <span class="material-symbols-outlined"> Saiba mais </span>
       </a>
     </div>
   </div>
-  <div class="card-gym">
-    <img src="{{ item.gym.gymImg }}" alt="{{ item.gym.gymTitle }}" />
+  <div class="card">
+    <img src="{{ item.gym.gymImg }}" alt="" />
     <div class="card-content">
       <h2>{{ item.gym.gymTitle }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci
-        voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores
-        harum? Dicta odio aut hic.
+        {{ item.gym.gymDescription }}
       </p>
       <a href="{{ item.gym.gymAnchor }}" class="button">
-        Find out more
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
+        <!-- Find out more -->
+        <span class="material-symbols-outlined"> Saiba mais </span>
       </a>
     </div>
   </div>
-  <div class="card-meditation">
-    <img
-      src="{{ item.meditation.meditationImg }}"
-      alt="{{ item.meditation.meditationTitle }}"
-    />
+  <div class="card">
+    <img src="{{ item.meditation.meditationImg }}" alt="" />
     <div class="card-content">
       <h2>{{ item.meditation.meditationTitle }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci
-        voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores
-        harum? Dicta odio aut hic.
+        {{ item.meditation.meditationDescription }}
       </p>
       <a href="{{ item.meditation.meditationAnchor }}" class="button">
-        Find out more
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
+        <!-- Find out more -->
+        <span class="material-symbols-outlined"> Saiba mais </span>
       </a>
     </div>
   </div>
-  <div class="card-pilates">
-    <img
-      src="{{ item.pilates.pilatesImg }}"
-      alt="{{ item.pilates.pilatesTitle }}"
-    />
+  <div class="card">
+    <img src="{{ item.pilates.pilatesImg }}" alt="" />
     <div class="card-content">
-      <h2>{{ item.bodyBuilding.bodyBuildingTitle }}</h2>
+      <h2>{{ item.pilates.pilatesTitle }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci
-        voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores
-        harum? Dicta odio aut hic.
+        {{ item.pilates.pilatesDescription }}
       </p>
       <a href="{{ item.pilates.pilatesAnchor }}" class="button">
-        Find out more
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
+        <!-- Find out more -->
+        <span class="material-symbols-outlined"> Saiba mais </span>
       </a>
     </div>
   </div>
-  <div class="card-womanfitness">
-    <img
-      src="{{ item.womanFitness.womanFitnessImg }}"
-      alt="{{ item.womanFitness.womanFitnessTitle }}"
-    />
+  <div class="card">
+    <img src="{{ item.womanFitness.womanFitnessImg }}" alt="" />
     <div class="card-content">
       <h2>{{ item.womanFitness.womanFitnessTitle }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci
-        voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores
-        harum? Dicta odio aut hic.
+        {{ item.womanFitness.womanDescription }}
       </p>
       <a href="{{ item.womanFitness.womanFitnessAnchor }}" class="button">
-        Find out more
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
+        <!-- Find out more -->
+        <span class="material-symbols-outlined"> Saiba mais </span>
       </a>
     </div>
   </div>
-  <div class="card-yoga">
-    <img src="{{ item.yoga.yogaImg }}" alt="{{ item.yoga.yogaTitle }}" />
+  <div class="card">
+    <img src="{{ item.yoga.yogaImg }}" alt="" />
     <div class="card-content">
       <h2>{{ item.yoga.yogaTitle }}</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci
-        voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores
-        harum? Dicta odio aut hic.
+        {{ item.yoga.yogaDescription }}
       </p>
       <a href="{{ item.yoga.yogaAnchor }}" class="button">
-        Find out more
-        <span class="material-symbols-outlined"> arrow_right_alt </span>
+        <!-- Find out more -->
+        <span class="material-symbols-outlined"> Saiba mais </span>
       </a>
     </div>
   </div>
