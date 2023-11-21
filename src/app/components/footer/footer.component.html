@@ -1,0 +1,74 @@
+<footer>
+  <nav>
+    <div class="icons" *ngFor="let network of links">
+      <a href={{network.instagram.instagramAnchor}} [target]="blank">
+        <img src={{network.instagram.instagramImg}} alt={{network.instagram.instagramAlt}} />
+      </a>
+      <a href={{network.facebook.facebookAnchor}} [target]="blank">
+        <img src={{network.facebook.facebookImg}} alt={{network.facebook.facebookAlt}} />
+      </a>
+      <a href={{network.twitter.twitterAnchor}} [target]="blank">
+        <img src={{network.twitter.twitterImg}} alt={{network.twitter.twitterAlt}} />
+      </a>
+      <a href={{network.whatsapp.whatsappAnchor}} [target]="blank">
+        <img src={{network.whatsapp.whatsappImg}} alt={{network.whatsapp.whatsappAlt}} />
+      </a>
+    </div>
+
+    <div class="columns">
+      <div class="first-line">
+        <h4>Lorem, ipsum.</h4>
+        <ul>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="second-line">
+        <h4>Lorem, ipsum.</h4>
+        <ul>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="third-line">
+        <h4>Lorem, ipsum.</h4>
+        <ul>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+          <li>
+            <a href="#">Lorem</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</footer>

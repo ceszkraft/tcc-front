@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormModule } from './components/form/form.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductModule } from './components/product/product.module';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormModule,
-    BrowserAnimationsModule
+    ProductModule,
+    BrowserAnimationsModule,
+    FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
