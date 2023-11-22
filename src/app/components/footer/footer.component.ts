@@ -12,7 +12,7 @@ export class FooterComponent {
 
   blank = '_blank';
   links = [
-      {
+    {
       instagram: {
         instagramImg: 'assets/footer/instagram.svg',
         instagramAnchor: 'https://www.instagram.com/',
@@ -35,6 +35,5 @@ export class FooterComponent {
       }
     }
   ];
-
 
 }
