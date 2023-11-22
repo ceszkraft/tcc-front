@@ -17,7 +17,19 @@ describe('FooterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component', () => {
     expect(component).toBeTruthy();
+  });
+  it('should validate assets path (instagram)', () => {
+    expect(component.links[0].instagram.instagramImg)
+      .toEqual('assets/footer/instagram.svg');
+  });
+  it('should validate assets anchor (instagram)', () => {
+    expect(component.links[0].instagram.instagramAnchor)
+      .toEqual('https://www.instagram.com/');
+  });
+  it('should validate assets anchor (instagram)', () => {
+    expect(component.links[0].instagram.instagramAlt)
+      .toEqual('Instagram logo');
   });
 });

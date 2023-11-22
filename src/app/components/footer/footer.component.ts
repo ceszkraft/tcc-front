@@ -15,7 +15,7 @@ export class FooterComponent {
       {
       instagram: {
         instagramImg: 'assets/footer/instagram.svg',
-        instagramAnchor: 'https://www.instagram.com/psi.iarapessoa/',
+        instagramAnchor: 'https://www.instagram.com/',
         instagramAlt: 'Instagram logo'
       },
       facebook: {

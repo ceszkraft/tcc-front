@@ -1,14 +1,14 @@
 export const environment = {
   production: false,
-
 }
 
+let url: string = 'http://localhost:'
+let port: number = 8080
+let endpoint0: string = 'person'
+let endpoint1: string = 'status'
+
 export const BASEURL = {
-  baseUrl: 'http://localhost:8080',
-  person: 'http://localhost:8080/person',
-  status: 'http://localhost:8080/status',
-  
-  // news:    'http://localhost:8081/news',
-  // books:   'http://localhost:8081/books',
-  // authorsFake: 'http://localhost:3000/authors'
+  baseUrl: `${url}${port}`,
+  person: `${url}${port}/${endpoint0}`,
+  status: `${url}${port}/${endpoint1}`
 };
