@@ -4,11 +4,6 @@ import { FormService } from './form.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form.component';
 
-// describe('AppComponent', () => {
-  //   beforeEach(() => TestBed.configureTestingModule({
-  //     imports: [RouterTestingModule],
-  //     declarations: [AppComponent]
-  //   }));
 
   describe('FormService', () => {
     beforeEach(() => TestBed.configureTestingModule({

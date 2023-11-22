@@ -28,7 +28,7 @@ describe('FooterComponent', () => {
     expect(component.links[0].instagram.instagramAnchor)
       .toEqual('https://www.instagram.com/');
   });
-  it('should validate assets anchor (instagram)', () => {
+  it('should validate assets alt (instagram)', () => {
     expect(component.links[0].instagram.instagramAlt)
       .toEqual('Instagram logo');
   });

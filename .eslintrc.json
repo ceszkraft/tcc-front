@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "standard-with-typescript",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        
+        "@typescript-eslint/semi": "off",
+        // Max 10 linhas em branco
+        "@typescript-eslint/max-lines": ["warn, 10"],
+        "quotes": ["error", "double"],
+        "no-unsafe-finally": "warn",
+        "capitalized-comments": "warn",
+        "no-empty": "warn",
+        "no-duplicate-imports": "error",
+        "no-unreachable": "error",
+
+        "no-unreachable-loop": "error",
+        "no-unused-vars": "error",
+        "arrow-body-style": ["error", "always"],
+        "camelcase": "error",
+        "consistent-return": "error",
+        "func-names": ["error", "always"],
+        "func-name-matching": "error",
+        "eol-last": ["error", "always"],
+        "no-duplicate-case": "error",
+        "no-dupe-keys": "error",
+        "no-irregular-whitespace": "warn",
+        "no-self-compare": "error",
+        "no-self-assign":"error",
+        "no-invalid-this": "error",
+        "no-lonely-if": "error",
+        "no-multi-str": "error",
+        "no-redeclare": "error",
+        "no-restricted-exports": "error"
+
+    }
+}
