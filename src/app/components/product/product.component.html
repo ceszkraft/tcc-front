@@ -1,95 +1,18 @@
 <main>
   @for (item of links; track $index) {
-  <div class="card">
-    <img src="{{ item.bodyBuilding.bodyBuildingImg }}" alt="" />
-    <div class="card-content">
-      <h2>{{ item.bodyBuilding.bodyBuildingTitle }}</h2>
-      <p>
-        {{ item.bodyBuilding.bodyBuildingDescription }}
-      </p>
-      <a href="{{ item.bodyBuilding.bodyBuildingAnchor }}" class="button">
-        Find out more
-        <span class="material-symbols-outlined"> Saiba mais </span>
-      </a>
+    <div class="card">
+      <img src="{{ item.image }}" alt="" />
+      <div class="card-content">
+        <h2>{{ item.title }}</h2>
+        <p>
+          {{ item.description }}
+        </p>
+        <a href="{{ item.anchor }}" class="button">
+          Find out more
+          <span class="material-symbols-outlined"> Saiba mais </span>
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="{{ item.crossfit.crossfitImg }}" alt="" />
-    <div class="card-content">
-      <h2>{{ item.crossfit.crossfitTitle }}</h2>
-      <p>
-        {{ item.crossfit.crossfitDescription }}
-      </p>
-      <a href="{{ item.crossfit.crossfitAnchor }}" class="button">
-        <!-- Find out more -->
-        <span class="material-symbols-outlined"> Saiba mais </span>
-      </a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="{{ item.gym.gymImg }}" alt="" />
-    <div class="card-content">
-      <h2>{{ item.gym.gymTitle }}</h2>
-      <p>
-        {{ item.gym.gymDescription }}
-      </p>
-      <a href="{{ item.gym.gymAnchor }}" class="button">
-        <!-- Find out more -->
-        <span class="material-symbols-outlined"> Saiba mais </span>
-      </a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="{{ item.meditation.meditationImg }}" alt="" />
-    <div class="card-content">
-      <h2>{{ item.meditation.meditationTitle }}</h2>
-      <p>
-        {{ item.meditation.meditationDescription }}
-      </p>
-      <a href="{{ item.meditation.meditationAnchor }}" class="button">
-        <!-- Find out more -->
-        <span class="material-symbols-outlined"> Saiba mais </span>
-      </a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="{{ item.pilates.pilatesImg }}" alt="" />
-    <div class="card-content">
-      <h2>{{ item.pilates.pilatesTitle }}</h2>
-      <p>
-        {{ item.pilates.pilatesDescription }}
-      </p>
-      <a href="{{ item.pilates.pilatesAnchor }}" class="button">
-        <!-- Find out more -->
-        <span class="material-symbols-outlined"> Saiba mais </span>
-      </a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="{{ item.womanFitness.womanFitnessImg }}" alt="" />
-    <div class="card-content">
-      <h2>{{ item.womanFitness.womanFitnessTitle }}</h2>
-      <p>
-        {{ item.womanFitness.womanDescription }}
-      </p>
-      <a href="{{ item.womanFitness.womanFitnessAnchor }}" class="button">
-        <!-- Find out more -->
-        <span class="material-symbols-outlined"> Saiba mais </span>
-      </a>
-    </div>
-  </div>
-  <div class="card">
-    <img src="{{ item.yoga.yogaImg }}" alt="" />
-    <div class="card-content">
-      <h2>{{ item.yoga.yogaTitle }}</h2>
-      <p>
-        {{ item.yoga.yogaDescription }}
-      </p>
-      <a href="{{ item.yoga.yogaAnchor }}" class="button">
-        <!-- Find out more -->
-        <span class="material-symbols-outlined"> Saiba mais </span>
-      </a>
-    </div>
-  </div>
   }
+
 </main>

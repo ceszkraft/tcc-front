@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { type Product } from '../product';
 
 @Component({
   selector: 'app-product',
@@ -10,50 +11,48 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductComponent {
 
-  links = [
+  links: Product[] = [
     {
-      bodyBuilding: {
-        bodyBuildingImg: 'assets/sports/bodybuilding/bodybuilding.jpg',
-        bodyBuildingAnchor: '#',
-        bodyBuildingTitle: 'Body Building',
-        bodyBuildingDescription: 'Lorem, ipsum dolor sit amet'
-      },
-      crossfit: {
-        crossfitImg: 'assets/sports/crossfit/crossfit.jpg',
-        crossfitAnchor: '#',
-        crossfitTitle: 'Crossfit',
-        crossfitDescription: 'Lorem, ipsum dolor sit amet. 1'
-      },
-      gym: {
-        gymImg: 'assets/sports/gym/gym.jpg',
-        gymAnchor: '#',
-        gymTitle: 'Gym logo',
-        gymDescription: 'Lorem, ipsum dolor sit amet.'
-      },
-      meditation: {
-        meditationImg: 'assets/sports/meditation/meditation.jpg',
-        meditationAnchor: '#',
-        meditationTitle: 'Meditation logo',
-        meditationDescription: 'Lorem, ipsum dolor sit amet.'
-      },
-      pilates: {
-        pilatesImg: 'assets/sports/pilates/pilates.jpg',
-        pilatesAnchor: '#',
-        pilatesTitle: 'Pilates logo',
-        pilatesDescription: 'Lorem, ipsum dolor sit amet.'
-      },
-      womanFitness: {
-        womanFitnessImg: 'assets/sports/woman-fitness/woman-fitness.jpg',
-        womanFitnessAnchor: '#',
-        womanFitnessTitle: 'Woman-fitness logo',
-        womanDescription: 'Lorem, ipsum dolor sit amet.'
-      },
-      yoga: {
-        yogaImg: 'assets/sports/yoga/yoga.jpg',
-        yogaAnchor: '#',
-        yogaTitle: 'Yoga logo',
-        yogaDescription: 'Lorem, ipsum dolor sit amet.'
-      }
+      title: 'Body Building',
+      image: 'assets/sports/bodybuilding/bodybuilding.jpg',
+      description: '',
+      anchor: '#'
+    },
+    {
+      title: 'Crossfit',
+      image: 'assets/sports/crossfit/crossfit.jpg',
+      description: 'Lorem, ipsum dolor sit amet. 1',
+      anchor: '#'
+    },
+    {
+      title: 'Gym logo',
+      image: 'assets/sports/gym/gym.jpg',
+      description: 'Lorem, ipsum dolor sit amet',
+      anchor: '#'
+    },
+    {
+      title: 'Meditation logo',
+      image: 'assets/sports/meditation/meditation.jpg',
+      description: 'Lorem, ipsum dolor sit amet',
+      anchor: '#'
+    },
+    {
+      title: 'Pilates logo',
+      image: 'assets/sports/pilates/pilates.jpg',
+      description: 'Lorem, ipsum dolor sit amet',
+      anchor: '#'
+    },
+    {
+      title: 'Woman-fitness logo',
+      image: 'assets/sports/woman-fitness/woman-fitness.jpg',
+      description: 'Lorem, ipsum dolor sit amet',
+      anchor: '#'
+    },
+    {
+      title: 'Yoga logo',
+      image: 'assets/sports/yoga/yoga.jpg',
+      description: 'Lorem, ipsum dolor sit amet',
+      anchor: '#'
     }
   ];
 
