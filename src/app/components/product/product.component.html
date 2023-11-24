@@ -1,17 +1,16 @@
 <main>
   @for (item of links; track $index) {
-    <div class="card">
-      <img src="{{ item.image }}" alt="" />
-      <div class="card-content">
-        <h2>{{ item.title }}</h2>
-        <p>
-          {{ item.description }}
-        </p>
-        <a href="{{ item.anchor }}" class="button">
-          <span class="material-symbols-outlined"> Saiba mais </span>
-        </a>
-      </div>
+  <div class="card">
+    <img src="{{ item.image }}" alt="{{ item.title }}" />
+    <div class="card-content">
+      <h2>{{ item.title }}</h2>
+      <p>
+        {{ item.description }}
+      </p>
+      <a href="{{ item.anchor }}" class="button">
+        <span class="material-symbols-outlined"> Saiba mais </span>
+      </a>
     </div>
+  </div>
   }
-
 </main>

@@ -20,37 +20,37 @@ export class ProductComponent {
     },
     {
       title: 'Crossfit',
-      image: 'assets/sports/crossfit/crossfit.jpg',
+      image: 'assets/sports/crossfit/cross.jpg',
       description: 'Lorem, ipsum dolor sit amet. 1',
       anchor: '#'
     },
     {
-      title: 'Gym logo',
-      image: 'assets/sports/gym/gym.jpg',
+      title: 'Gym',
+      image: 'assets/sports/gym/gym1.jpg',
       description: 'Lorem, ipsum dolor sit amet',
       anchor: '#'
     },
     {
-      title: 'Meditation logo',
+      title: 'Meditation',
       image: 'assets/sports/meditation/meditation.jpg',
       description: 'Lorem, ipsum dolor sit amet',
       anchor: '#'
     },
     {
-      title: 'Pilates logo',
+      title: 'Pilates',
       image: 'assets/sports/pilates/pilates.jpg',
       description: 'Lorem, ipsum dolor sit amet',
       anchor: '#'
     },
     {
-      title: 'Woman-fitness logo',
-      image: 'assets/sports/woman-fitness/woman-fitness.jpg',
+      title: 'Yoga',
+      image: 'assets/sports/yoga/yoga.jpg',
       description: 'Lorem, ipsum dolor sit amet',
       anchor: '#'
     },
     {
-      title: 'Yoga logo',
-      image: 'assets/sports/yoga/yoga.jpg',
+      title: 'Woman-fitness',
+      image: 'assets/sports/woman/woman.jpg',
       description: 'Lorem, ipsum dolor sit amet',
       anchor: '#'
     }
