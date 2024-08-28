@@ -16,7 +16,7 @@
     "no-empty": "warn",
     // max-lines linhas em branco permitidas
     // "max-lines": ["warn", 20],
-    "padded-blocks" : [1, "always"],
+    "padded-blocks" : [0, "always"],
     "no-duplicate-imports": "error",
     "no-unreachable" : "error",
     "no-unreachable-loop": "error",

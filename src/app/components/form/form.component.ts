@@ -1,105 +1,126 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable @typescript-eslint/space-before-function-paren */
+/* eslint-disable @typescript-eslint/prefer-readonly */
+/* eslint-disable @typescript-eslint/unbound-method */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/semi */
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormsModule, ReactiveFormsModule,
-   Validators, FormGroup, FormControl} from '@angular/forms';
-  
-import { PersonModel } from 'src/app/model/Person';
+import {
+  FormBuilder,
+  Validators
+} from '@angular/forms';
+
+import { Person } from 'src/app/model/Person';
 import { FormService } from './form.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.sass']
+  styleUrls: ['./form.component.sass'
+  ],
+  providers: [HttpClient]
 })
-export class FormComponent implements OnInit{
-  constructor(private _formBuilder: FormBuilder, 
-              private service: FormService) {}
-  
-  ngOnInit(): void {
-    // this.getUsers()
+export class FormComponent implements OnInit {
+
+  defaultStatusServer: boolean = false;
+
+  persons: Person[] = [];
+  person: Person = {
+    fullName: '',
+    cpf: '',
+    email: '',
+    password: '',
+    username: '',
+    birthday: ''
+  };
+
+  constructor(private formBuilder: FormBuilder, 
+    private service: FormService) { }
+
+  ngOnInit (): void {
     this.isServerRunning()
   }
 
-  defaultStatusServer: Boolean = false;
-
-  isServerRunning(){
-    this.service.isServerRunning().subscribe((data: Boolean) => {
+  isServerRunning () {
+    this.service.isServerRunning().subscribe((data: boolean) => {
       console.log(data);
       this.defaultStatusServer = data
     })
+
   }
 
-  getUsers(){
-    this.service.getUserService().subscribe((data: PersonModel[]) => {
+  postUser(user: Person) {
+    this.service.postPerson(user)
+      .subscribe((userObj: Person) => {
+        this.person = userObj
+      }) 
+  }
+
+  getUsers () {
+    this.service.getUserService().subscribe((data: Person[]) => {
       console.log(data);
-      this.personModels = data
+      this.persons = data
     })
   }
 
-  firstFormGroup: FormGroup = this._formBuilder.group({firstCtrl: ['']});
-  secondFormGroup: FormGroup = this._formBuilder.group({secondCtrl: ['']});
 
-  personModels?: PersonModel[]
-  personModel: PersonModel = {
-    id: 0,
-    first_name: '',
-    last_name: '',
-    cpf: '',
-    email: '',
-    secret: '',
-    consumerName: ''
-  }
+  profileForm = this.formBuilder.group({
+    
+    fullName: ['Caesar Henrique Gonzaga Branco', [
+      // Validators.minLength(10),
+      // Validators.max(120)
+    ]],
+    
+    cpf: ['07593102033', [
+    ]], 
+    
+    email: ['testeemail@gmail.com', [
+      // Validators.required,
+      // Validators.minLength(10),
+      // Validators.max(100),
+      // Validators.email
 
-  profileForm = new FormGroup({
-    name: new FormControl('', [
-      Validators.required,
-      Validators.minLength(4),
-      Validators.maxLength(100)
-    ]),
-    email: new FormControl('', [
-      Validators.required,
-      Validators.minLength(3),
-      Validators.email
-    ]),
-    secret: new FormControl('',[
-      Validators.minLength(6),
-      Validators.required
-    ]),
-    age: new FormControl('',[
-      Validators.required
-    ])
-  });
+    ]],
 
-  addressForm = new FormGroup({
-    street: new FormControl('', [
-      Validators.required,
-      Validators.minLength(4),
-      Validators.maxLength(100)
-    ]),
-    number: new FormControl('', [
-      Validators.maxLength(10000)
-    ]),
-    cep: new FormControl('', [
-      Validators.required,
-      Validators.minLength(8),
-      Validators.maxLength(9)
-    ]), 
-    state: new FormControl('', [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(20)
-    ]),
-    city: new FormControl('', [
-      Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(20)
-    ])
+    password: ['scheisseMann1', [
+      // Validators.required,
+      // Validators.minLength(4),
+      // Validators.max(25)
+    ]],
+
+    username: ['REXXBRANCO', [
+      // Validators.minLength(10),
+      // Validators.max(120)
+    ]],
+
+    birthday: ['', [
+      // Validators.required
+
+    ]]
+
   })
 
-  onSubmit(){
-    console.log(this.profileForm.value);
-    console.log(this.addressForm.value);
-    this.profileForm.reset
-    this.addressForm.reset
+  onSubmit() {
+    this.person = {
 
+      fullName: this.profileForm.value.fullName,
+      cpf: this.profileForm.value.cpf,
+      email: this.profileForm.value.email,
+      password: this.profileForm.value.password,
+      username: this.profileForm.value.username,
+      birthday: this.profileForm.value.birthday
+  
+    }
+    this.postUser(this.person)
+    console.log(`Isso foi enviado ->\n ${JSON.stringify(this.person)}`);
+
+    this.profileForm.reset()
   }
+
+  
 }

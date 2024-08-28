@@ -1,9 +1,8 @@
-export interface PersonModel {
-  id: number
-  first_name: string
-  last_name: string
-  cpf: string
-  email: string
-  secret: string
-  consumerName: string
+export interface Person {
+  fullName?: string | null
+  cpf?: string | null
+  email?: string | null
+  password?: string | null
+  username?: string | null
+  birthday?: string | null
 }

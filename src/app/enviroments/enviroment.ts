@@ -1,11 +1,11 @@
 export const environment = {
-  production: false,
-}
+  production: false
+};
 
-let url: string = 'http://localhost:'
-let port: number = 8080
-let endpoint0: string = 'person'
-let endpoint1: string = 'status'
+const url: string = 'http://localhost:';
+const port: number = 8080;
+const endpoint0: string = 'person';
+const endpoint1: string = 'status';
 
 export const BASEURL = {
   baseUrl: `${url}${port}`,
