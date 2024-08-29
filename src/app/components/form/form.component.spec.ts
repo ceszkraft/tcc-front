@@ -33,7 +33,7 @@ describe('FormComponent', () => {
 
   it('should personModel be Object', () => {
 
-    expect(component.personModel).toBeInstanceOf(Object);
+    expect(component.person).toBeInstanceOf(Object);
 
   });
 
