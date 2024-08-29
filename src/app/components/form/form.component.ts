@@ -71,35 +71,37 @@ export class FormComponent implements OnInit {
 
   profileForm = this.formBuilder.group({
     
-    fullName: ['Caesar Henrique Gonzaga Branco', [
-      // Validators.minLength(10),
-      // Validators.max(120)
+    fullName: ['', [
+      Validators.minLength(10),
+      Validators.max(120)
     ]],
     
-    cpf: ['07593102033', [
+    cpf: ['', [
+      Validators.required
     ]], 
     
-    email: ['testeemail@gmail.com', [
-      // Validators.required,
-      // Validators.minLength(10),
-      // Validators.max(100),
-      // Validators.email
+    email: ['', [
+      Validators.required,
+      Validators.minLength(10),
+      Validators.max(100),
+      Validators.email
 
     ]],
 
-    password: ['scheisseMann1', [
-      // Validators.required,
-      // Validators.minLength(4),
-      // Validators.max(25)
+    password: ['', [
+      Validators.required,
+      Validators.minLength(4),
+      Validators.max(25)
     ]],
 
-    username: ['REXXBRANCO', [
-      // Validators.minLength(10),
-      // Validators.max(120)
+    username: ['', [
+      Validators.minLength(10),
+      Validators.max(120),
+      Validators.required
     ]],
 
     birthday: ['', [
-      // Validators.required
+      Validators.required
 
     ]]
 
